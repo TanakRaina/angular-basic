@@ -4,15 +4,19 @@ import { Component , Input } from '@angular/core';
   selector: 'app-root',
   template: `
   <h1>
-    Hey this{{title}}
-    <counter [count] ="initialCount"></counter>
+  {{title}}
+  <counter [count] ="initialCount"></counter>
+
   </h1>
-
-
+  <p>
+<calculate [footer]="message"></calculate>
+</p>
 `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  initialCount: number =0;
+  title = ' Counter';
+  initialCount: number = 10;
+  message: string = "Calculated results !";
+  ;
 }
